@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  /* color: var(--foreground);
+  background: var(--background); */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Default for lg screens */
+}
+
+@media (min-width: 1255px) {
+  .custom-grid {
+    grid-template-columns: 1fr; /* Change to one column at 1255px and above */
+  }
+}
+
+@layer utilities {
+  .bg-custom-gradient {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      180deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(6,89,106,1) 0%,
+      rgba(11, 81, 84, 1) 59%
+    );
+  }
+}
+@layer utilities {
+  .bg-button-gradient {
+    background: rgb(0,212,255);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 212, 255, 1) 46%,
+      rgba(34,126,132,1) 100%,
+      rgba(2, 0, 36, 1) 100%
+    );
+  }
+}
+
+/* background: rgb(0,212,255); */
+/* background: linear-gradient(90deg, rgba(0,212,255,1) 46%, rgba(34,126,132,1) 100%, rgba(2,0,36,1) 100%); */
+

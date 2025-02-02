@@ -1,6 +1,6 @@
 import Image from "next/image";
 import doctor from "../../public/doctor.png";
-import whatsapp from "../../public/whatsapp.png";
+import whatsapp from "../../public/Whatsapp.png";
 import college from "../../public/college.jpeg";
 
 const HeroSection = () => {
